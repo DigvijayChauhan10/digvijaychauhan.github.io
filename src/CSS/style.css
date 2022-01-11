@@ -1,0 +1,806 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap");
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #212121;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #4278f2;
+}
+
+.blur {
+    opacity: 0.4;
+}
+
+.active,
+ul a:hover {
+    border-bottom: 3px solid #f8f6f2;
+    transition: all 0.3s ease;
+}
+
+header {
+    width: 100%;
+    margin: auto;
+    height: 60px;
+    background-color: #212121;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    float: left;
+    color: #f8f6f2;
+    margin-top: 5px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    float: right;
+    margin: 0;
+    z-index: 100001;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #f8f6f2;
+}
+
+.container {
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+}
+
+.container .sec1,
+.container .sec2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .sec1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .sec1 p a {
+    color: #ff5733;
+}
+
+.container .sec1 p {
+    margin-left: 4px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.container .sec1 h4 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: rgb(204, 214, 246);
+}
+
+.container .sec1 h1 {
+    margin-left: 0;
+    font-size: 3.5em;
+    color: rgb(204, 214, 246);
+}
+
+.container .sec1 h1 span {
+    color: #ff5733;
+}
+
+.container .sec1 .cu {
+    padding: 10px;
+    border-radius: 10%;
+    border: 1px solid #ff5733;
+    color: #ff5733;
+}
+
+.container .sec2 .imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .sec2 .imageWrapper img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.about .sec1 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.about .sec1 div {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 87, 51, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 200px;
+}
+
+.about .sec1 div h2 {
+    opacity: 1;
+    color: rgb(204, 214, 246);
+}
+
+.about .sec2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .sec2 .content {
+    width: 80%;
+    height: 80%;
+    background-color: #292a2d;
+    padding: 10px 10px 10px 200px;
+    font-size: 16px;
+    color: rgb(204, 214, 246);
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #212121;
+    top: 0;
+    bottom: 0;
+    left: 3%;
+    margin-left: -3px;
+}
+
+
+/* Container around content */
+
+.tl-container {
+    padding: 10px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+}
+
+
+/* The circles on the timeline */
+
+.tl-container::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -17px;
+    background-color: rgb(204, 214, 246);
+    border: 4px solid #ff5733;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Place the container to the right */
+
+.tl-right {
+    left: 3%;
+}
+
+
+/* Fix the circle for containers on the right side */
+
+.tl-right::after {
+    left: -12px;
+}
+
+
+/* The actual content */
+
+.tl-content {
+    padding: 10px;
+    position: relative;
+    border-radius: 6px;
+}
+
+.workex {
+    font-size: 14px;
+}
+
+
+/* Skills box */
+
+.skill {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.skill .sec1 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .sec1 .content {
+    width: 80%;
+    height: 80%;
+    background-color: #292a2d;
+    padding: 30px 200px 30px 30px;
+    font-size: 16px;
+    color: rgb(204, 214, 246);
+    position: relative;
+    left: 90px;
+}
+
+.skill .sec1 .content h3 {
+    margin-top: 20px;
+}
+
+.skill .sec1 .content .skill2 {
+    margin-top: 50px;
+}
+
+.skill .sec1 .content .programmingCon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skill .sec1 .content .programmingCon .pc1,
+.skill .sec1 .content .programmingCon .pc2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.skill .sec1 .content .programmingCon .pc2 {
+    margin-top: 20px;
+}
+
+.skill .sec1 .content .programmingCon .pc1 div,
+.skill .sec1 .content .programmingCon .pc2 div {
+    border-radius: 50%;
+    background-color: rgb(204, 214, 246);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill .sec1 .content .programmingCon img {
+    width: 60px;
+    height: 60px;
+}
+
+.skill .sec2 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .sec2 div {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 110px;
+    background-color: rgba(255, 87, 51, 0.5);
+}
+
+.skill .sec2 div h2 {
+    opacity: 1;
+    color: rgb(204, 214, 246);
+}
+
+
+/* Projects section*/
+
+.work {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.work h3 {
+    text-align: center;
+    color: rgb(204, 214, 246);
+    font-size: 2em;
+}
+
+.work .projects1,
+.work .projects2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.work .projects2 {
+    margin-top: 20px;
+}
+
+.work .projects1 .projectCard,
+.work .projects2 .projectCard {
+    width: 450px;
+    height: 300px;
+    background-color: rgba(41, 42, 45, .9);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.work .projects1 .projectCard h4,
+.work .projects2 .projectCard h4 {
+    text-align: center;
+    color: #627d98;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.work .projects1 .projectCard .key,
+.work .projects2 .projectCard .key {
+    margin: 0;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.work .projects1 .projectCard h5,
+.work .projects2 .projectCard h5 {
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(22, 94, 89);
+}
+
+.work .projects1 .projectCard p,
+.work .projects2 .projectCard p {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #627d98;
+}
+
+.work .projects1 .projectCard .first,
+.work .projects2 .projectCard .first {
+    margin-top: 15px;
+}
+
+.work .projects1 .projectCard .cu,
+.work .projects2 .projectCard .cu {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work .projects1 .projectCard .cu a,
+.work .projects2 .projectCard .cu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(22, 94, 89);
+    color: rgb(22, 94, 89);
+}
+
+.work .projects1 .projectCard,
+.work .projects2 .projectCard {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: rgb(204, 214, 246);
+}
+
+
+/* contact section start */
+
+.contactsec {
+    position: relative;
+    height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactsec .contact {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contactsec .contact .cont-container h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.contactsec .cont-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cont-container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-container .contactInfo .cn-box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.cont-container .contactInfo .cn-box h3 {
+    color: rgb(204, 214, 246);
+}
+
+.cont-container .contactInfo .cn-box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: rgba(255, 87, 51, 0.5);
+    color: rgb(204, 214, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.cont-container .contactInfo .cn-box .cn-text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactsec .cnform {
+    width: 40%;
+    padding: 40px;
+    background: #292a2d;
+}
+
+.contactsec .cnform h3 {
+    font-size: 30px;
+    color: #ff5733;
+    font-weight: 500;
+}
+
+.contactsec .cnform .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactsec .cnform .inputBox input,
+.contactsec .cnform .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgba(255, 87, 51, 0.5);
+    outline: none;
+    resize: none;
+    color: rgb(204, 214, 246);
+    background: transparent;
+}
+
+.contactsec h2 {
+    color: rgb(204, 214, 246);
+}
+
+.contactsec .cnform .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(204, 214, 246);
+}
+
+.contactsec .cnform .inputBox input:focus~span,
+.contactsec .cnform .inputBox input:valid~span,
+.contactsec .cnform .inputBox textarea:focus~span,
+.contactsec .cnform .inputBox textarea:valid~span {
+    color: rgba(255, 87, 51, 0.5);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactsec .cnform .inputBox input[type='submit'] {
+    width: 100px;
+    background: rgba(255, 87, 51, 0.5);
+    color: rgb(204, 214, 246);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 214, 246);
+    background-color: #212121;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column-reverse;
+        height: max-content;
+        margin-top: 0px;
+    }
+    .container .sec2 .imageWrapper img {
+        height: 300px;
+        width: 300px;
+    }
+    .container .sec1 {
+        margin-top: 50px;
+    }
+    .container .sec2,
+    .container .sec1 {
+        width: 100%;
+    }
+    .container .sec1 p {
+        font-size: 20px;
+    }
+    .container .sec1 h4 {
+        font-size: 1.5em;
+    }
+    .container .sec1 h1 {
+        font-size: 3em;
+    }
+    .about {
+        flex-direction: column;
+        height: max-content;
+        margin-top: 100px;
+    }
+    .about .sec2,
+    .about .sec1 {
+        width: 100%;
+    }
+    .about .sec1 div {
+        height: 200px;
+        width: 70%;
+        left: 0;
+    }
+    .about .sec2 .content {
+        width: 90%;
+        padding: 15px;
+    }
+    .skill {
+        flex-direction: column-reverse;
+        height: max-content;
+        margin-top: 100px;
+    }
+    .skill .sec1,
+    .skill .sec2 {
+        width: 100%;
+    }
+    .skill .sec2 div {
+        right: 0;
+        width: 70%;
+        height: 200px;
+    }
+    .skill .sec1 .content {
+        left: 0;
+        width: 90%;
+        padding: 20px;
+    }
+    .skill .sec1 .content h3 {
+        text-align: center;
+    }
+    .skill .sec1 .content .programmingCon {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .skill .sec1 .content .programmingCon .pc1,
+    .skill .sec1 .content .programmingCon .pc2 {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .skill .sec1 .content .programmingCon .pc1 div,
+    .skill .sec1 .content .programmingCon .pc2 div {
+        margin-right: 15px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill .sec1 .content .programmingCon img {
+        width: 50px;
+        height: 50px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .logo {
+        margin-top: 8px;
+    }
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    header .menu-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+    }
+    header .menu-btn .menu-bur {
+        width: 40px;
+        height: 3px;
+        background-color: #f8f6f2;
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+    }
+    header .menu-btn .menu-bur::before,
+    header .menu-btn .menu-bur::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: #f8f6f2;
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+    }
+    header .menu-btn .menu-bur::before {
+        transform: translateY(-12px);
+    }
+    header .menu-btn .menu-bur::after {
+        transform: translateY(12px);
+    }
+    header .menu-btn.open .menu-bur {
+        background: transparent;
+    }
+    header .menu-btn.open .menu-bur::before {
+        transform: rotate(-45deg);
+    }
+    header .menu-btn.open .menu-bur::after {
+        transform: rotate(45deg);
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(255, 87, 51, 0.5);
+        width: 100%;
+        padding: 0;
+        clip-path: circle(10px at 100% -20%);
+        transition: all 1s ease;
+    }
+    .nav-item a {
+        color: #f8f6f2;
+    }
+    .menu-btn.open~.nav {
+        clip-path: circle(1210px at 100% 0%);
+        height: calc(100vh - 60px);
+    }
+    .work {
+        height: max-content;
+        margin-top: 100px;
+    }
+    .work .projects1,
+    .work .projects2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .work .projects1 .projectCard,
+    .work .projects2 .projectCard {
+        width: 80%;
+        height: 300px;
+        margin-top: 15px;
+    }
+    .contactsec {
+        padding: 15px;
+    }
+    .contactsec .cont-container {
+        flex-direction: column;
+    }
+    .contactsec .cont-container .contactInfo {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contactsec .cont-container .cnform {
+        width: 100%;
+    }
+}
