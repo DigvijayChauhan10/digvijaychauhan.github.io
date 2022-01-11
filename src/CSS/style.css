@@ -791,6 +791,8 @@ footer {
         margin-top: 15px;
     }
     .contactsec {
+        height: max-content;
+        margin-top: 100px;
         padding: 15px;
     }
     .contactsec .cont-container {
