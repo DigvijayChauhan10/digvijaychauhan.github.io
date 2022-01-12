@@ -613,6 +613,7 @@ footer {
 @media screen and (max-width: 1000px) {
     .container {
         flex-direction: column-reverse;
+        
         height: max-content;
         margin-top: 0px;
     }
@@ -791,6 +792,8 @@ footer {
         margin-top: 15px;
     }
     .contactsec {
+        height: max-content;
+        margin-top: 100px;
         padding: 15px;
     }
     .contactsec .cont-container {
