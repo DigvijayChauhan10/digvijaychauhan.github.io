@@ -322,7 +322,7 @@ header {
 .skill .sec1 .content .programmingCon .pc1 div,
 .skill .sec1 .content .programmingCon .pc2 div {
     border-radius: 50%;
-    background-color: rgb(204, 214, 246);
+    background-color: #f8f6f2;
     width: 70px;
     height: 70px;
     display: flex;
